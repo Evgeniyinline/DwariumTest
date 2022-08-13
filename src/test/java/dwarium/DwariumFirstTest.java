@@ -13,15 +13,16 @@ public class DwariumFirstTest {
     @BeforeAll
     static void configure() {
         Configuration.baseUrl = "https://w2.dwar.ru/index.php";
-        Configuration.browserBinary = "/path/to/dwarium";
-        Configuration.browser = "Dwarium";
-        Configuration.browserSize = "400x900";
+        System.setProperty("webdriver.chrome.driver", "/Users/macbook/Downloads/chromedriver");
+        Configuration.browserBinary = "/Applications/Dwarium.app";
+        Configuration.browser = "chrome";
+        Configuration.browserSize = "700x900";
 
     }
 
     @Test
     void dwariumFirstTest () {
-        open("https://w2.dwar.ru/index.php");
+        open("https://w2.dwar.ru");
         $("#tbl-nws_link_red").shouldHave(text("ОБ ИГРЕ"));
     }
 }

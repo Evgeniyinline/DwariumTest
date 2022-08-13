@@ -25,6 +25,9 @@ dependencies {
     testRuntimeOnly("org.slf4j:slf4j-simple:1.7.36")
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter:5.9.0")
+    implementation ("org.seleniumhq.selenium:selenium-java:4.4.0")
+
+
 
 }
 
